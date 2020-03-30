@@ -1,5 +1,6 @@
 字符串转换成数组
-JavaScript
+
+```js
 
 var str="abcdefg"
  //1、将字符串转成数组形式：split()
@@ -11,3 +12,5 @@ var str="abcdefg"
  //2、将数组元素反转：reverse()函数只能反转数组
  var rever=arr.reverse()
  console.log(rever.join(""))//gfedcba
+
+```
