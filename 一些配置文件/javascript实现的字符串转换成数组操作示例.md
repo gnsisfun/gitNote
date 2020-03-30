@@ -1,8 +1,8 @@
-字符串转换成数组
+#### 字符串转换成数组
 
 ```js
 
-var str="abcdefg"
+ var str="abcdefg"
  //1、将字符串转成数组形式：split()
  var arr=str.split("")
  console.log(arr)//["a", "b", "c", "d", "e", "f", "g"]
