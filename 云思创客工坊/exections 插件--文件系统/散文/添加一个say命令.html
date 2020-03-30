@@ -1,0 +1,13 @@
+<attachment contenteditable="false" data-atts="%5B%5D" data-aid=".atts-126e9ca3-f28e-4554-861a-ff302b1a8ebb"></attachment><p>You can see how the <a href="https://github.com/LLK/scratch-vm/blob/develop/src/blocks/scratch3_looks.js#L301-L309" target="_blank" style="color: rgb(26, 160, 216);">say block</a> makes a bubble appear:</p><pre class="ql-syntax" spellcheck="false">    say (args, util) {
+        // @TODO in 2.0 calling say/think resets the right/left bias of the bubble
+        let message = args.MESSAGE;
+        if (typeof message === 'number') {
+            message = parseFloat(message.toFixed(2));
+        }
+        message = String(message).substr(0, Scratch3LooksBlocks.SAY_BUBBLE_LIMIT);
+        this.runtime.emit('SAY', util.target, 'say', message);
+    }
+</pre><p>If your extension has access to the runtime, you can do something similar, like</p><pre class="ql-syntax" spellcheck="false">  sayUserAgent (args, util) {
+    this.runtime.emit('SAY', util.target, 'say', navigator.userAgent)
+  }
+</pre><p><br></p>
